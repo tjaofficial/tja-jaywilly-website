@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}{% load static %}{% block content %}
+<link href="{% static 'style/landing.css' %}" rel="stylesheet">
+<link href="{% static 'style/tour_dates.css' %}" rel="stylesheet">
+<script defer src="{% static 'script/landing.js' %}"></script>
+<div class="contentCont" style="height: calc(100vh - 18px - 32px ); padding-top: 60px;">
+    <div class="" style="text-align:center;">
+        <img src="{% static 'images/another.png' %}" width="674px" style="margin: 100px; background-color: black; box-shadow: inset #015658 0 0 26px 110px;">
+    </div>
+    <div class="orangeBack" style="height:40px; display: flex; justify-content:center; align-items:center;">
+        <div class="green" style="width:600px;display: flex;">
+            <div style="width:50%; text-align:left; display: block; font-size: 0.96em;font-weight: bold;">Upcoming Shows / Local Dates</div>
+            <div style="width:50%; text-align:right; display: block; font-size: 0.96em;font-weight: bold;">facebook-X</div>
+        </div>
+    </div>
+    <div style="width:800px;margin:auto; ">
+        {% for show in showQuery %}
+        <div style="display:flex; align-items:center;height:80px;padding:15px;">
+            <div style="width:7%; font-size: 2.2em">{{show.date.day}}</div>
+            <div style="width:15%;">{{show.date|date:'F'}}</div>
+            <div id="venue" style="width:30%;">
+                {{show.venue|title}}
+            </div>
+            <div id="location" style="width:40%;">{{show.city}}, {{show.state}}</div>
+            <div id="button" style="width:15%;">Notify Me</div>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

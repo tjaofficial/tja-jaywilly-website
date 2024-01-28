@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}{% load static %}{% block content %}
+<link href="{% static 'style/add_show.css' %}" rel="stylesheet">
+<div class="contentCont" style="height: calc(100vh - 18px - 32px ); padding-top: 60px;">
+    <div style="margin:40px;background:white;padding: 25px; color: black;">
+        <form method="POST" action=''>
+            {% csrf_token %}
+            {{form.name.label}}<br>
+            {{form.name}}<br><br>
+            {{form.local.label}}<br>
+            {{form.local}}<br><br>
+            {{form.date.label}}<br>
+            {{form.date}}<br><br>
+            {{form.time_start.label}}<br>
+            {{form.time_start}}<br><br>
+            {{form.time_end.label}}<br>
+            {{form.time_end}}<br><br>
+            {{form.venue.label}}<br>
+            {{form.venue}}<br><br>
+            {{form.address.label}}<br>
+            {{form.address}}<br><br>
+            {{form.city.label}}<br>
+            {{form.city}}<br><br>
+            {{form.state.label}}<br>
+            {{form.state}}<br><br>
+            {{form.zipcode.label}}<br>
+            {{form.zipcode}}<br><br>
+            {{form.description.label}}<br>
+            {{form.description}}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}

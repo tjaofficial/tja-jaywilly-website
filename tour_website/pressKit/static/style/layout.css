@@ -1,0 +1,37 @@
+body{
+    background:black;
+    color: white;
+    min-width: 460px;
+    margin: 0;
+}
+.landingBack{
+    background-image: linear-gradient(to left, #005658 0%, #005658 50%, #FF7F50 50%, #FF7F50 100%);
+}
+.greenBack{
+    background-color: #005658;
+}
+.orangeBack{
+    background-color: #FF7F50;
+}
+.green{
+    color: #005658;
+}
+.orange{
+    color: #FF7F50;
+}
+html{
+    font-family: sans-serif;
+    min-width: 460px;
+}
+header{
+    width: 100%;
+    position: fixed;
+    background: #FF7F50;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: #000000 0px -20px 133px 0px;
+}
+.mainCont{
+    /* margin-top: 60px; */
+}

@@ -1,0 +1,62 @@
+/* .halfy{
+    background: linear-gradient(to left, #005544 0%, #005544 50%, #FF7F50 50%, #FF7F50 100%);
+    background-clip: text;
+} */
+.N{
+    position:relative;
+    text-transform:uppercase;
+    color:#FF7F50;
+}
+.N:before{
+    content: attr(data-content);
+    position:absolute;
+    top:0; left:0;
+    width:43px;
+    overflow:hidden;
+    color:#005544;
+}
+.Day{
+    position:relative;
+    text-transform:uppercase;
+    color:#FF7F50;
+}
+.Day:before{
+    content: attr(data-content);
+    position:absolute;
+    top:0; left:0;
+    width:131px;
+    overflow:hidden;
+    color:#005544;
+}
+.Night{
+    position:relative;
+    text-transform:uppercase;
+    color:#FF7F50;
+}
+.Night:before{
+    content: attr(data-content);
+    position:absolute;
+    top:0; left:0;
+    width:187px;
+    overflow:hidden;
+    color:#005544;
+}
+.primaryHeaderFont{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 120px;
+}
+.titleHolder{
+    width: 53rem;
+    margin: auto;
+}
+.tourTitle{
+    /* height: calc(100vh - 18px - 32px );
+    display: flex;
+    align-items: center; */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
