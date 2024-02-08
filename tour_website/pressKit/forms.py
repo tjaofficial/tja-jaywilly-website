@@ -17,5 +17,6 @@ class shows_form(ModelForm):
             'state': forms.TextInput(attrs={'type':'text'}),
             'zipcode': forms.TextInput(attrs={'type':'text'}),
             'description': forms.Textarea(),
-            'venue': forms.TextInput(attrs={'type':'text'})
+            'venue': forms.TextInput(attrs={'type':'text'}),
+            'ticket_link': forms.TextInput(attrs={'type':'text'})
         }

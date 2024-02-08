@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}{% load static %}{% block content %}
+<link href="{% static 'style/tjaofficial.css' %}" rel="stylesheet">
+<div class="artistMainCont">
+    <div class="contentArea">
+        <div class="pictureLogo">
+            <div class="gradientBG"></div>
+            <img id="logo" width="500px" src="{% static 'images/TJA-logos-gold.png' %}">
+            <img id="pic" width="600" src="{% static 'images/tja_wo_bg.png' %}">
+        </div>
+        <div style="margin-top:300px;">
+            <div class="headerFont" style="text-align:center; width:100%;">MUSIC</div>
+            <div style="text-align:center; width:100%;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/35OgBxQyHiMEsaTwKuajIB?utm_source=generator&theme=0" width="60%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div style="margin-top:60px;">
+            <div class="headerFont" style="text-align:center; width:100%;">VIDEOS</div>
+            <div class="videoGap" style="margin-top:unset;">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/jX8XVUrxNpI?si=DnnEdaKtSyz1hgV9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="videoGap">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/T5dvHRMgzog?si=7VeGBGdpbossB8rO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="videoGap">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/27E4QrSXT8Q?si=AA6kETlp8rTxkZ49" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="videoGap">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/jrun-buqC78?si=xGrcviNtnUDgmOOL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="videoGap">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/6xdsD2mnuPo?si=llD6yIi7aFNhUVdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

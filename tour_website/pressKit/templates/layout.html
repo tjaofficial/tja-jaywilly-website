@@ -9,28 +9,17 @@
     </head>
     <body class="{% if header %}greenBack{% else %}landingBack{% endif %}">
         {% if header %}
-            <header>
-                <div class="green" style="font-weight:bold; font-size: 30px; width: 50%; margin-left:2rem;">Day-N-Night Tour</div>
-                <div style="width:50%; margin-right:2rem; display: flex; justify-content: right;">
-                    <div class="headerTab">
-                        <a href="{% url 'tourDates' %}">Tour Schedule</a>
-                    </div>
-                    <div class="headerTab">
-                        <a href=#>Content Upload</a>
-                    </div>
-                    <div class="headerTab">
-                        <a href="{% url 'addshows' %}">Content Upload</a>
-                    </div>
-                </div>
-            </header>
+            {% include 'components/header.html' %}
         {% endif %}
         <div class="mainCont">
             {% block content %}
 
             {% endblock %}
         </div>
+        {% if not noFooter %}
         <footer class="green" style="font-weight:bold;">
-            <p>&copy; 2024 Night-N-Day Tour | All rights reserved</p>
+            <p>&copy; 20245 Night-N-Day Tour | All rights reserved</p>
         </footer>
+        {% endif %}
     </body>
 </html>

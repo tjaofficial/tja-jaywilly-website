@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}{% load static %}{% block content %}
+<link href="{% static 'style/jaywilly.css' %}" rel="stylesheet">
+<div class="artistMainCont">
+    <div class="contentArea">
+        <div class="pictureLogo">
+            <div class="gradientBG"></div>
+            {% comment %} <img id="logo" width="500px" src="{% static 'images/TJA-logos-gold.png' %}"> {% endcomment %}
+            <img id="pic" width="500px" src="{% static 'images/jay_willy_art.png' %}">
+        </div>
+        <div style="margin-top:300px;">
+            <div class="headerFont" style="text-align:center; width:100%;">MUSIC</div>
+            <div style="text-align:center; width:100%;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6a9IwwqP3jxlNEfJfZpHo6?utm_source=generator" width="60%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div style="margin-top:60px;">
+            <div class="headerFont" style="text-align:center; width:100%;">VIDEOS</div>
+            <div class="videoGap" style="margin-top:unset;">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/JgxliNqavbQ?si=1zn5Vw2OKfOj-V2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="videoGap">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/jrun-buqC78?si=xGrcviNtnUDgmOOL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="videoGap">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/6xdsD2mnuPo?si=llD6yIi7aFNhUVdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

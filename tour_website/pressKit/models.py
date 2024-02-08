@@ -14,5 +14,6 @@ class shows(models.Model):
     zipcode = models.CharField(max_length=15)
     description = models.CharField(max_length=2000)
     venue = models.CharField(max_length=25)
+    ticket_link = models.CharField(max_length=250)
     def __str__(self):
         return str(self.name)

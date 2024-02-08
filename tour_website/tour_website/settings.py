@@ -26,9 +26,7 @@ SECRET_KEY = 'django-insecure-5&tf87-e#5731r(-snum===aomr_jjgioqhj8s=$mm*k50ot3u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '*'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -119,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -130,3 +128,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'pressKit/static'),)
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+BRAINTREE_PUBLIC_KEY = 'd8gjybxt5qk3j3d8'
+BRAINTREE_PRIVATE_KEY = '7d99dedf7b68a4a616340c23a753a067'
+BRAINTREE_MERCHANT_ID = 'cyjsnsxswvc7m7yd'
+TOKENIZATION_KEY = 'sandbox_w3c8xck9_cyjsnsxswvc7m7yd'

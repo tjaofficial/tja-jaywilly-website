@@ -1,0 +1,15 @@
+.tab{
+    margin-right:25px;
+}
+.tabsCont{
+    width:50%; 
+    margin-right:2rem; 
+    display: flex; 
+    justify-content: right;
+}
+.headerTitle{
+    font-weight:bold; 
+    font-size: 30px; 
+    width: 50%; 
+    margin-left:2rem;
+}
