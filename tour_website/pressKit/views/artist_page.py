@@ -2,25 +2,25 @@ from django.shortcuts import render
 from ..models import videoLinks, socialLinks
 
 def artist_page_view(request, artistName):
-    print(artistName)
-    videoQuery = videoLinks.objects.all()
-    socialQuery = socialLinks.objects.all()
-    spotifyURI = False
-    for artist in socialQuery:
-        if artist.artistChoice.name.lower() == artistName:
-            spotifyURI = artist.spotifyURI
+    # print(artistName)
+    # videoQuery = videoLinks.objects.all()
+    # socialQuery = socialLinks.objects.all()
+    # spotifyURI = False
+    # for artist in socialQuery:
+    #     if artist.artistChoice.name.lower() == artistName:
+    #         spotifyURI = artist.spotifyURI
         
     
-    videoList = []
-    for video in videoQuery:
-        if video.artistChoice.name.lower() == artistName:
-            videoList.append(video)
+    # videoList = []
+    # for video in videoQuery:
+    #     if video.artistChoice.name.lower() == artistName:
+    #         videoList.append(video)
 
     return render(request, 'artist_page_template.html', {
         'header': True,
         'noFooter': True,
-        'videoList': videoList,
-        'spotifyURI': spotifyURI,
+        # 'videoList': videoList,
+        # 'spotifyURI': spotifyURI,
         'artistName': artistName
     })
 
