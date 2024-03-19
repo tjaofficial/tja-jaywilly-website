@@ -24,7 +24,6 @@ class artistInfo(models.Model):
         return str(self.name)
     
 class videoLinks(models.Model):
-    artistName = models.CharField(max_length=50)
     artistChoice = models.ForeignKey(artistInfo, on_delete=models.CASCADE, blank=True, null=True)
     name = models.CharField(max_length=50)
     embedLink = models.CharField(max_length=500)
