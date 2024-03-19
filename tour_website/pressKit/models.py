@@ -18,10 +18,10 @@ class shows(models.Model):
     def __str__(self):
         return str(self.name)
     
-# class artistInfo(models.Model):
-#     name = models.CharField(max_length=50)
-#     def __str__(self):
-#         return str(self.name)
+class artistInfo(models.Model):
+    name = models.CharField(max_length=50)
+    def __str__(self):
+        return str(self.name)
     
 class videoLinks(models.Model):
     artistName = models.CharField(max_length=50)
