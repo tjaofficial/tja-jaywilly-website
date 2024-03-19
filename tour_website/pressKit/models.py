@@ -28,7 +28,7 @@ class videoLinks(models.Model):
     name = models.CharField(max_length=50)
     embedLink = models.CharField(max_length=500)
     def __str__(self):
-        return str(self.artistChoice) + ' - ' + str(self.name)
+        return str(self.id) + ' - ' + str(self.name)
     
 class socialLinks(models.Model):
     artistChoice = models.ForeignKey(artistInfo, on_delete=models.CASCADE, blank=True, null=True)
@@ -43,4 +43,4 @@ class socialLinks(models.Model):
     snapchat = models.CharField(max_length=300)
     soundcloud = models.CharField(max_length=300)
     def __str__(self):
-        return str(self.artistChoice)
+        return str(self.id)
