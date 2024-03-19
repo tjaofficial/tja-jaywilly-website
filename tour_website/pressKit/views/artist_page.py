@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from ..models import videoLinks, socialLinks
+#from ..models import videoLinks, socialLinks
 
 def artist_page_view(request, artistName):
     # print(artistName)
