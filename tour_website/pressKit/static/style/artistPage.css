@@ -1,0 +1,34 @@
+.artistMainCont{
+    background: black;
+    border: 10px white solid;
+    border-radius: 60px;
+    width: 883px;
+    margin: auto;
+    margin: 0;
+    padding-bottom: 35px;
+}
+.contentArea{
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    overflow: scroll;
+}
+.videoGap{
+    margin-top:60px; 
+    text-align:center;
+}
+.headerFont{
+    font-size: 42px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.mainHolder{
+    width: 903px;
+    margin: auto;
+    margin-top: 77px;
+    box-shadow: 0 0 89px -25px #2300ff;
+    border-radius: 62px;
+}

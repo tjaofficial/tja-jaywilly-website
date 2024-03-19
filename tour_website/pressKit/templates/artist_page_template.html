@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}{% load static %}{% block content %}
+<link href="{% static 'style/artistPage.css' %}" rel="stylesheet">
+<div class="mainHolder">
+<div class="artistMainCont">
+    <div class="contentArea">
+        {% include 'components/artist_picture_name.html' with artistChoice=artistName %}
+        <div style="{% if artistName == 'tjaofficial' %}margin-top:300px;{% elif artistName == 'jay willy' %}margin-top: 93px;{% endif %}">
+            <div class="headerFont" style="text-align:center; width:100%;">MUSIC</div>
+            <div style="text-align:center; width:100%;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/{{spotifyURI|slice:'15:'}}?utm_source=generator&theme=0" width="60%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        
+            <div style="margin-top:60px;">
+                <div class="headerFont" style="text-align:center; width:100%;">VIDEOS</div>
+                {% for video in videoList %}
+                <div class="videoGap" style="margin-top:unset;">
+                    <iframe width="800" height="500" src="{{video.embedLink}}" title="{{video.name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

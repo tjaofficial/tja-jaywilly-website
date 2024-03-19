@@ -1,0 +1,32 @@
+{% load static %}
+{% if artistChoice == 'tjaofficial' %}
+<link href="{% static 'style/tjaofficial.css' %}" rel="stylesheet">
+<div class="pictureLogo">
+    <div class="gradientBG"></div>
+    <img id="logo" width="500px" style="z-index: 2;" src="{% static 'images/TJA-logos-gold.png' %}">
+    <img id="pic" width="600" style="z-index: 1;" src="{% static 'images/tja_wo_bg.png' %}">
+</div>
+{% elif artistChoice == 'jay willy' %}
+<link href="{% static 'style/jaywilly.css' %}" rel="stylesheet">
+<div class="pictureLogo">
+    <div class="picture_border">
+        <div class="gradientBG"></div>
+        {% comment %} <img id="logo" style="z-index: 2;" width="500px" src="{% static 'images/TJA-logos-gold.png' %}"> {% endcomment %}
+        <img id="pic" width="500px" style="z-index: 1;" src="{% static 'images/jay_willy_art.png' %}">
+    </div>
+    <div class="nameBox">Jay Willy</div>
+</div>
+{% elif artistChoice == 'melius' %}
+<link href="{% static 'style/jaywilly.css' %}" rel="stylesheet">
+{% comment %} <div class="pictureLogo">
+    <div class="gradientBG"></div>
+    <img id="logo" style="z-index: 2;" width="500px" src="{% static 'images/TJA-logos-gold.png' %}">
+    <img id="pic" width="500px" style="z-index: 1;" src="{% static 'images/jay_willy_art.png' %}">
+</div> {% endcomment %}
+<div style="width: 100%;
+margin: auto;
+text-align: center;
+font-size: 146px;
+padding: 68px 0;">Melius</div>
+
+{% endif %}

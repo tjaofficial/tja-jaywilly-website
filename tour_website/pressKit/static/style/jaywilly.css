@@ -1,44 +1,13 @@
-.artistMainCont{
-    background: black;
-    border: 10px coral solid;
-    border-radius: 60px;
-    width: 883px;
-    height: 1289px;
-    margin: auto;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .pictureLogo{
     width: 70%;
     margin: auto;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     margin-top: 22px;
 }
 .pictureLogo #logo{
     position: absolute;
     top: 143px;
-}
-.contentArea{
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    overflow: scroll;
-}
-.videoGap{
-    margin-top:60px; 
-    text-align:center;
-}
-.headerFont{
-    font-size: 42px;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: #fdb035;
 }
 .gradientBG{
     width: 50px;
@@ -47,6 +16,28 @@
     border-radius: 276px;
     position: absolute;
     top: 300px;
-    z-index: -1;
-    box-shadow: #ffbd00 0 0 207px 151px;
+    z-index: 0;
+    box-shadow: #9b00d8 0 0 207px 151px;
+}
+.nameBox{
+    color: white;
+    position: relative;
+    /* border: 12px solid #def0fe; */
+    /* border-radius: 43px; */
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 154px;
+    font-family: fantasy;
+    font-weight: bold;
+    /* background: #3d0a54; */
+    z-index: 1;
+}
+.picture_border{
+    display: flex;
+    justify-content: center;
+    border: 26px #431252 solid;
+    border-radius: 274px;
+    overflow: hidden;
 }
