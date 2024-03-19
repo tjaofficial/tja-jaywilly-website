@@ -17,3 +17,10 @@ class shows(models.Model):
     ticket_link = models.CharField(max_length=250)
     def __str__(self):
         return str(self.name)
+    
+class videoLinks(models.Model):
+    artistName = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    embedLink = models.CharField(max_length=500)
+    def __str__(self):
+        return str(self.name)

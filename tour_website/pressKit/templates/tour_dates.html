@@ -1,16 +1,62 @@
 {% extends 'layout.html' %}{% load static %}{% block content %}
 <link href="{% static 'style/landing.css' %}" rel="stylesheet">
 <script defer src="{% static 'script/landing.js' %}"></script>
-<div class="contentCont" style="height: calc(100vh - 18px - 32px ); padding-top: 60px;">
-    <div class="" style="text-align:center; padding:25px 0;">
-        <img src="{% static 'images/another.png' %}" width="674px" style="background-color: black; box-shadow: inset #015658 0 0 26px 110px;">
+<style>
+    .button {
+        height: 50px;
+        width: 200px;
+        position: relative;
+        background-color: transparent;
+        cursor: pointer;
+        border: 2px solid white;
+        overflow: hidden;
+        border-radius: 30px;
+        color: white;
+        transition: all 0.5s ease-in-out;
+      }
+      
+      .btn-txt {
+        z-index: 1;
+        font-weight: 800;
+        letter-spacing: 4px;
+      }
+      
+      .type1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.5s ease-in-out;
+        background-color: #822bdd;
+        border-radius: 30px;
+        visibility: hidden;
+        height: 10px;
+        width: 10px;
+        z-index: -1;
+      }
+      
+      .button:hover {
+        box-shadow: 1px 1px 200px #753faf;
+        color: white;
+        border: none;
+      }
+      
+      .type1:hover::after {
+        visibility: visible;
+        transform: scale(100) translateX(2px);
+      }
+</style>
+ <div class="contentCont"> {% comment %}style="height: calc(100vh - 18px - 32px );"> {% endcomment %}
+    <div class="" style="text-align:center;">
+        {% comment %} <img src="{% static 'images/another.png' %}" width="674px" style="background-color: black; box-shadow: inset #015658 0 0 26px 110px;"> {% endcomment %}
+        <img src="{% static 'images/neon_day_night.png' %}" width="573px">
     </div>
-    <div class="orangeBack" style="height:40px; display: flex; justify-content:center; align-items:center;">
+    {% comment %} <div class="orangeBack" style="height:40px; display: flex; justify-content:center; align-items:center;">
         <div class="green" style="width:600px;display: flex;">
             <div style="width:50%; text-align:left; display: block; font-size: 0.96em;font-weight: bold;">Upcoming Shows / Local Dates</div>
             <div style="width:50%; text-align:right; display: block; font-size: 0.96em;font-weight: bold;">facebook-X</div>
         </div>
-    </div>
+    </div> {% endcomment %}
     <div style="width:800px;margin:auto; ">
         {% for show in showQuery %}
         <div style="display:flex; align-items:center;height:80px;padding:15px;">
@@ -22,11 +68,15 @@
             <div id="location" style="width:40%;">{{show.venue|title}} - {{show.city}}, {{show.state}}</div>
             {% if tickets %}
             <a href="{{show.ticket_link}}">
-                <div id="button" style="width:15%;">Tickets</div>
+                <button class="button type1">
+                    <span class="btn-txt">Tickets</span>
+                </button>
             </a>
             {% else %}
             <a href="{{show.ticket_link}}">
-                <div id="button" style="width:15%;">RSVP</div>
+                <button class="button type1">
+                    <span class="btn-txt">RSVP</span>
+                </button>
             </a>
             {% endif %}
         </div>

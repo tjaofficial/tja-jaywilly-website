@@ -1,15 +1,11 @@
 .artistMainCont{
     background: black;
-    border: 10px coral solid;
+    border: 10px white solid;
     border-radius: 60px;
     width: 883px;
-    height: 1289px;
     margin: auto;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-bottom: 35px;
 }
 .pictureLogo{
     width: 70%;
@@ -23,7 +19,7 @@
     top: 215px;
 }
 .contentArea{
-    position: fixed;
+    position: relative;
     right: 0;
     left: 0;
     bottom: 0;
@@ -38,7 +34,7 @@
     font-size: 42px;
     font-family: sans-serif;
     font-weight: bold;
-    color: #fdb035;
+    color: white;
 }
 .gradientBG{
     width: 50px;
@@ -47,6 +43,13 @@
     border-radius: 276px;
     position: absolute;
     top: 300px;
-    z-index: -1;
-    box-shadow: #ffbd00 0 0 207px 151px;
+    z-index: 0;
+    box-shadow: #6547ff 0 0 207px 151px;
+}
+.mainHolder{
+    width: 903px;
+    margin: auto;
+    margin-top: 77px;
+    box-shadow: 0 0 89px -25px #2300ff;
+    border-radius: 62px;
 }

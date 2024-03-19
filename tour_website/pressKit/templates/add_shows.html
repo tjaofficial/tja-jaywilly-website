@@ -1,13 +1,12 @@
 {% extends 'layout.html' %}{% load static %}{% block content %}
 <link href="{% static 'style/add_show.css' %}" rel="stylesheet">
-<div class="contentCont" style="height: calc(100vh - 18px - 32px ); padding-top: 60px;">
-    <div style="margin:40px;background:white;padding: 25px; color: black;">
+<div class="contentCont">
+    <div class="showForm">
         <form method="POST" action=''>
             {% csrf_token %}
+            <div class="centerText title">Add Show</div>
             {{form.name.label}}<br>
             {{form.name}}<br><br>
-            {{form.local.label}}<br>
-            {{form.local}}<br><br>
             {{form.date.label}}<br>
             {{form.date}}<br><br>
             {{form.time_start.label}}<br>
@@ -24,6 +23,8 @@
             {{form.state}}<br><br>
             {{form.zipcode.label}}<br>
             {{form.zipcode}}<br><br>
+            {{form.ticket_link.label}}<br>
+            {{form.ticket_link}}<br><br>
             {{form.description.label}}<br>
             {{form.description}}
             <input type="submit" value="Submit">

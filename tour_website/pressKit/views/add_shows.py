@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from ..models import shows
 from ..forms import shows_form
 
@@ -7,9 +7,13 @@ def add_shows_view(request):
     form = shows_form
     
     if request.method == "POST":
-        formData = shows_form(request.POST)
+        requestCopy = request.POST.copy()
+        requestCopy['local'] = True
+        formData = shows_form(requestCopy)
+        print(formData.errors)
         if formData.is_valid():
             formData.save()
+            return redirect('tourDates')
     return render(request, 'add_shows.html', {
         'header': True,
         'form': form

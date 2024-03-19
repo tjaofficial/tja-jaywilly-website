@@ -5,9 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{% static 'style/layout.css' %}" rel="stylesheet">
+        <style>
+            #grad {
+                background-image: linear-gradient(black 0%, #000057 20%, #4e0035, black);
+                width: 100vw;
+                height: 100vh;
+            }
+        </style>
         <title>Night and Day Tour</title>
     </head>
-    <body class="{% if header %}greenBack{% else %}landingBack{% endif %}">
+    <body id="grad">
         {% if header %}
             {% include 'components/header.html' %}
         {% endif %}
@@ -17,7 +24,7 @@
             {% endblock %}
         </div>
         {% if not noFooter %}
-        <footer class="green" style="font-weight:bold;">
+        <footer class="white" style="font-weight:bold;">
             <p>&copy; 20245 Night-N-Day Tour | All rights reserved</p>
         </footer>
         {% endif %}
