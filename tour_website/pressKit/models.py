@@ -24,14 +24,14 @@ class artistInfo(models.Model):
         return str(self.name)
     
 class videoLinks(models.Model):
-    artistChoice = models.ForeignKey(artistInfo, on_delete=models.CASCADE, blank=True, null=True)
+    artistName = models.CharField(max_length=50)
     name = models.CharField(max_length=50)
     embedLink = models.CharField(max_length=500)
     def __str__(self):
         return str(self.id) + ' - ' + str(self.name)
     
 class socialLinks(models.Model):
-    artistChoice = models.ForeignKey(artistInfo, on_delete=models.CASCADE, blank=True, null=True)
+    artistName = models.CharField(max_length=50)
     instagram = models.CharField(max_length=300)
     youtube = models.CharField(max_length=300)
     spotify = models.CharField(max_length=300)
